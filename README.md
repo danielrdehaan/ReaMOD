@@ -56,16 +56,18 @@ Note: Users of macOS Catalina or newer may need to click on "Allow Anyway" in Sy
 
 ### Installing ReaMOD
 
-1) Locate your REAPER resource folder
+1) Download the [lastest release](https://github.com/danielrdehaan/ReaMOD/raw/refs/heads/main/Releases/ReaMOD_V1.0_Beta.zip) of ReaMOD
+
+2) Locate your REAPER resource folder
    In REAPER: Options → “Show REAPER resource path in explorer/finder”.
    This opens the root directory where REAPER expects extensions.
 
-2) Copy the extension file for your operating system into the UserPlugins subfolder:
+3) Copy the extension file for your operating system into the UserPlugins subfolder:
 
      - macOS   → REAPER/UserPlugins/reaper_ReaMOD_Plugin.dylib
      - Windows → REAPER/UserPlugins/reaper_ReaMOD_Plugin.dll
 
-3) Copy the ReaMOD folder into the top level of the REAPER resources folder.
+4) Copy the ReaMOD folder into the top level of the REAPER resources folder.
     
     This folder contains the FMOD API files ReaMOD needs to be able to communicate with FMOD.
 
@@ -93,9 +95,9 @@ Note: Users of macOS Catalina or newer may need to click on "Allow Anyway" in Sy
         ```
 
 
-4) Copy the ReaMOD JSFX to the Effects folder in REAPER's Resource directory.
+5) Copy the ReaMOD JSFX to the Effects folder in REAPER's Resource directory.
 
-5) Restart REAPER
+6) Restart REAPER
 
    After copying everything into place, restart REAPER.
    If installed correctly all the ReaMOD actions should appear in REAPER's actions list.
