@@ -22,6 +22,7 @@ Join the [Simple Sound Tools](https://discord.gg/jX3sFetnD3) Discord community.
 
 This REAPER script requires:
 - REAPER 7.20+ (could work with older versions but has not been tested)
+- FMOD Studio 2.03.09
 - ReaPack
 - SWS/S&M REAPER extension
 - ReaImGUI
@@ -73,13 +74,6 @@ Note: Users of macOS Catalina or newer may need to click on "Allow Anyway" in Sy
 
      - macOS   → REAPER/ReaMOD
      - Windows → REAPER/ReaMOD
-
-     **FMOD Distribution Notice**
-        ReaMOD is distributed with FMOD API library files (.dylib/.lib) for convenience installing the ReaMOD extension. This distribution has been authorized by Firelight Technologies.
-
-   The inclusion of FMOD library files in this repository does not constitute a license to use FMOD commercially. If you plan to use ReaMOD (or FMOD directly) in any commercial capacity, you must obtain your own license from FMOD. For complete licensing information and to obtain a commercial license, please visit: www.fmod.com/legal
-
-    Example macOS-oriented layout (Windows users typically put DLLs next to REAPER.exe, not here):
    
         ```
          REAPER/
@@ -90,9 +84,11 @@ Note: Users of macOS Catalina or newer may need to click on "Allow Anyway" in Sy
                ├─ core/
                │  └─ lib/
                │     └─ libfmod.dylib              (macOS)
+               │     └─ fmod.dll                   (windows)|       
                └─ studio/
                   └─ lib/
                      └─ libfmodstudio.dylib        (macOS)
+                     └─ fmodstudio.dll             (windows)
         ```
 
 
@@ -108,7 +104,6 @@ Notes
 - macOS Gatekeeper: if macOS blocks the dylib, open System Settings → Privacy & Security and “Allow Anyway”, then restart REAPER. If needed:
     `xattr -dr com.apple.quarantine "REAPER/UserPlugins/reaper_ReaMOD_Plugin.dylib"`
 - Architecture: use 64-bit REAPER with 64-bit FMOD (Windows x64; macOS universal is supported).
-- Debug FMOD libs (libfmodL.*, fmodL.*) are for development; end users should use the non-L variants.
 
 
 
