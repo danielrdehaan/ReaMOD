@@ -77,9 +77,10 @@ Note: Users of macOS Catalina or newer may need to click on "Allow Anyway" in Sy
      **FMOD Distribution Notice**
         ReaMOD is distributed with FMOD API library files (.dylib/.lib) for convenience installing the ReaMOD extension. This distribution has been authorized by Firelight Technologies.
 
-        The inclusion of FMOD library files in this repository does not constitute a license to use FMOD commercially. If you plan to use ReaMOD (or FMOD directly) in any commercial capacity, you must obtain your own license from FMOD. For complete licensing information and to obtain a commercial license, please visit: www.fmod.com/legal
+   The inclusion of FMOD library files in this repository does not constitute a license to use FMOD commercially. If you plan to use ReaMOD (or FMOD directly) in any commercial capacity, you must obtain your own license from FMOD. For complete licensing information and to obtain a commercial license, please visit: www.fmod.com/legal
 
     Example macOS-oriented layout (Windows users typically put DLLs next to REAPER.exe, not here):
+   
         ```
          REAPER/
          ├─ UserPlugins/
@@ -95,9 +96,9 @@ Note: Users of macOS Catalina or newer may need to click on "Allow Anyway" in Sy
         ```
 
 
-5) Copy the ReaMOD JSFX to the Effects folder in REAPER's Resource directory.
+6) Copy the ReaMOD JSFX to the Effects folder in REAPER's Resource directory.
 
-6) Restart REAPER
+7) Restart REAPER
 
    After copying everything into place, restart REAPER.
    If installed correctly all the ReaMOD actions should appear in REAPER's actions list.
