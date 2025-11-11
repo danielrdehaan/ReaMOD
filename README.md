@@ -57,7 +57,7 @@ Note: Users of macOS Catalina or newer may need to click on "Allow Anyway" in Sy
 
 ### Installing ReaMOD
 
-1) Download the [lastest release](https://github.com/danielrdehaan/ReaMOD/raw/refs/heads/main/Releases/ReaMOD_V1.0_Beta.zip) of ReaMOD
+1) Download the [lastest release](https://github.com/danielrdehaan/ReaMOD/releases) of ReaMOD
 
 2) Locate your REAPER resource folder
    In REAPER: Options → “Show REAPER resource path in explorer/finder”.
