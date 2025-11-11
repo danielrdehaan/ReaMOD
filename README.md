@@ -2,7 +2,7 @@
 
 ReaMOD is an extension for [REAPER](https://www.reaper.fm/), a digital audio workstation, that integrates FMOD Studio projects into REAPER. It allows users to trigger FMOD events and snapshots directly within REAPER, providing a seamless workflow for game audio development and other interactive audio applications.
 
-I recorded a quick [video](https://www.youtube.com/live/mngoJSFgblk) showing the basic workflow/concepts of ReaMOD. For some reason, OBS captured the audio from Reaper twice so all the playback examples sound off. Sorry! Someday I'll produce a better quality demo video.
+I recorded a quick [video](https://youtube.com/live/mngoJSFgblk?feature=share) showing the basic workflow/concepts of ReaMOD. For some reason, OBS captured the audio from Reaper twice so all the playback examples sound off. Sorry! Someday I'll produce a better quality demo video.
 
 ## Discord Community
 Join the [Simple Sound Tools](https://discord.gg/jX3sFetnD3) Discord community.
@@ -21,7 +21,7 @@ Join the [Simple Sound Tools](https://discord.gg/jX3sFetnD3) Discord community.
 ## Change Log
 
 ### Beta V1.1
-[Update Video](https://www.youtube.com/live/Y-gWZGlOJcU)
+[Update Video](https://youtube.com/live/Y-gWZGlOJcU?feature=share)
 - Improved parameter automation workflow
     - Added custom: "ReaMOD: Insert track and custom JSFX for controlling/automating FMOD global parameters
     - Made sliders/dropdowns in custom JSFX mirror range, step size, labels, etc of FMOD parameters.
