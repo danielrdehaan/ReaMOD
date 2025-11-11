@@ -18,6 +18,20 @@ Join the [Simple Sound Tools](https://discord.gg/jX3sFetnD3) Discord community.
 - **Playback Monitoring**: Monitor REAPER's playback and trigger FMOD events based on markers or items.
 - **Custom Actions**: Provides custom actions that can be assigned to keyboard shortcuts or toolbar buttons for quick access.
 
+## Change Log
+
+### Beta V1.1
+[Update Video](https://www.youtube.com/live/Y-gWZGlOJcU)
+- Improved parameter automation workflow
+    - Added custom: "ReaMOD: Insert track and custom JSFX for controlling/automating FMOD global parameters
+    - Made sliders/dropdowns in custom JSFX mirror range, step size, labels, etc of FMOD parameters.
+    - JSFX now get created in a project specific folder "Reaper Resource Path/Effects/ReaMOD"
+- ReaMOD now saves/recalls states with Reaper project file
+    - Saves/Recalls...
+        - FMOD Project
+        - Bank Directories
+        - Bank Load States
+
 ## Requirements:
 
 This REAPER script requires:
