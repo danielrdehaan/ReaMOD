@@ -18,6 +18,20 @@ Join the [Simple Sound Tools](https://discord.gg/jX3sFetnD3) Discord community.
 - **Playback Monitoring**: Monitor REAPER's playback and trigger FMOD events based on markers or items.
 - **Custom Actions**: Provides custom actions that can be assigned to keyboard shortcuts or toolbar buttons for quick access.
 
+## Change Log
+
+### Beta V1.1
+[Update Video](https://www.youtube.com/live/Y-gWZGlOJcU)
+- Improved parameter automation workflow
+    - Added custom: "ReaMOD: Insert track and custom JSFX for controlling/automating FMOD global parameters
+    - Made sliders/dropdowns in custom JSFX mirror range, step size, labels, etc of FMOD parameters.
+    - JSFX now get created in a project specific folder "Reaper Resource Path/Effects/ReaMOD"
+- ReaMOD now saves/recalls states with Reaper project file
+    - Saves/Recalls...
+        - FMOD Project
+        - Bank Directories
+        - Bank Load States
+
 ## Requirements:
 
 This REAPER script requires:
@@ -57,7 +71,7 @@ Note: Users of macOS Catalina or newer may need to click on "Allow Anyway" in Sy
 
 ### Installing ReaMOD
 
-1) Download the [lastest release](https://github.com/danielrdehaan/ReaMOD/raw/refs/heads/main/Releases/ReaMOD_V1.0_Beta.zip) of ReaMOD
+1) Download the [lastest release](https://github.com/danielrdehaan/ReaMOD/releases) of ReaMOD
 
 2) Locate your REAPER resource folder
    In REAPER: Options → “Show REAPER resource path in explorer/finder”.
