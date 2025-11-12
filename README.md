@@ -87,7 +87,7 @@ Note: Users of macOS Catalina or newer may need to click on "Allow Anyway" in Sy
     This folder contains the FMOD API files ReaMOD needs to be able to communicate with FMOD.
 
      - macOS   → REAPER/ReaMOD
-     - Windows → REAPER/ReaMOD
+    
    
         ```
          REAPER/
@@ -104,11 +104,12 @@ Note: Users of macOS Catalina or newer may need to click on "Allow Anyway" in Sy
                      └─ libfmodstudio.dylib        (macOS)
                      └─ fmodstudio.dll             (windows)
         ```
+     - Windows → REAPER/
+
+       Place both fmod `.dll` files at the root level of Reaper's Resources file (alongside) the Reaper application.
 
 
-6) Copy the ReaMOD JSFX to the Effects folder in REAPER's Resource directory.
-
-7) Restart REAPER
+6) Restart REAPER
 
    After copying everything into place, restart REAPER.
    If installed correctly all the ReaMOD actions should appear in REAPER's actions list.
