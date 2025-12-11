@@ -20,6 +20,19 @@ Join the [Simple Sound Tools](https://discord.gg/CYYHNCxhK) Discord community.
 
 ## Change Log
 
+### Beta V1.2
+
+Enhanced FMOD Bank Loading:
+- Custom Build Paths: ReaMOD now parses the FMOD project's Workspace.xml to automatically detect custom bank export directories.
+- Multi-Platform Support: The extension now scans the project's build folder for any platform subdirectories (e.g., Mobile, Console) containing bank files, rather than strictly looking for "Desktop".
+
+Renamed Master Banks:
+- Added support for projects with renamed Master Banks. ReaMOD now scans for any file ending in *.strings.bank to load metadata, instead of requiring the file to be named Master.strings.bank.
+
+**Additional Bug Fixes:**
+- Fixed a "zombie event" issue where looping playback or scrubbing backward in the timeline would clear the reference to active events without stopping them, causing them to play indefinitely.
+- Fixed logic errors in the state loading system where saved bank directories could be inadvertently overwritten by empty defaults.
+
 ### Beta V1.1
 [Update Video](https://youtube.com/live/Y-gWZGlOJcU?feature=share)
 - Improved parameter automation workflow
