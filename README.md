@@ -20,21 +20,55 @@ Join the [Simple Sound Tools](https://discord.gg/CYYHNCxhK) Discord community.
 
 ## Change Log
 
-### Beta V1.2
+### V1.3 Beta
 
-Enhanced FMOD Bank Loading:
-- Custom Build Paths: ReaMOD now parses the FMOD project's Workspace.xml to automatically detect custom bank export directories.
-- Multi-Platform Support: The extension now scans the project's build folder for any platform subdirectories (e.g., Mobile, Console) containing bank files, rather than strictly looking for "Desktop".
+**New Features**
 
-Renamed Master Banks:
-- Added support for projects with renamed Master Banks. ReaMOD now scans for any file ending in *.strings.bank to load metadata, instead of requiring the file to be named Master.strings.bank.
+- Load/Unload Buttons for Bank Directories: Each bank search directory now has a dedicated Load/Unload button, allowing users to quickly enable or disable entire directories (e.g., specific platform builds) without removing them from the list
+- Smart Directory Detection: When adding a bank directory via "Add directory...", ReaMOD now intelligently detects platform subfolders. If you select a parent folder containing platform builds (Desktop, Mobile, etc.), it automatically adds each platform subfolder that contains banks
+- Labeled Parameter Dropdowns: Parameters with labels (e.g., "Low", "Medium", "High") now display as dropdown menus instead of sliders, showing the actual label names
+- Discrete Parameter Support: Discrete (integer-only) parameters now use integer sliders that snap to whole values, providing more intuitive control
 
-**Additional Bug Fixes:**
-- Fixed a "zombie event" issue where looping playback or scrubbing backward in the timeline would clear the reference to active events without stopping them, causing them to play indefinitely.
-- Fixed logic errors in the state loading system where saved bank directories could be inadvertently overwritten by empty defaults.
+**Improvements**
+
+- Path Normalization: Consistent path handling across Windows and macOS, fixing issues where the same directory could appear twice with different path formats
+- Project State Persistence: Directory enabled states are now saved and restored with your Reaper project
+- Bank Loading Reliability: Fixed issues where removing and re-adding a directory could cause "already loaded" errors. ReaMOD now properly re-syncs with FMOD's internal state
+- Project Change Detection: Improved handling when switching between Reaper projects while ReaMOD window is open
+- Renamed "Rescan" button to "Refresh" for clarity
+
+Bug Fixes
+
+- Fixed crash when opening ReaMOD window (missing MarkProjectDirty API function)
+- Fixed bank files appearing twice after removing and re-adding a directory
+- Fixed path comparison issues between Windows backslashes and forward slashes
+- Disabled directories now shown in gray with "(disabled)" indicator
+
+
+### V1.2 Beta
+
+**New Features**
+
+- Custom Bank Output Directory Support: ReaMOD now reads Workspace.xml from your FMOD project to detect custom bank output directories, supporting projects that don't use the default "Build" folder
+- Automatic Platform Detection: Instead of only looking in "Build/Desktop/", ReaMOD now scans all platform subdirectories within the build folder and adds any that contain bank files
+- Flexible Strings Bank Detection: Support for renamed Master banks - any file ending in .strings.bank is now recognized as a strings/metadata bank (not just Master.strings.bank)
+
+**Improvements**
+
+- Smarter Bank Directory Discovery: When loading a project, ReaMOD first runs automatic discovery to find bank directories on disk, then merges any manually-added directories from saved state
+- Bank loading now properly excludes all .strings.bank files from the toggleable bank list (they're loaded automatically)
+- Improved debug logging for bank discovery and loading process
+- Better handling of relative paths in custom build directory settings (e.g., ../Banks)
+
+**Bug Fixes**
+
+- Fixed event instances not being properly released when playhead moves backward
+= Fixed fallback logic when no saved bank directories exist - now uses smart finder instead of hardcoded "Build/Desktop"
 
 ### Beta V1.1
+
 [Update Video](https://youtube.com/live/Y-gWZGlOJcU?feature=share)
+
 - Improved parameter automation workflow
     - Added custom: "ReaMOD: Insert track and custom JSFX for controlling/automating FMOD global parameters
     - Made sliders/dropdowns in custom JSFX mirror range, step size, labels, etc of FMOD parameters.
